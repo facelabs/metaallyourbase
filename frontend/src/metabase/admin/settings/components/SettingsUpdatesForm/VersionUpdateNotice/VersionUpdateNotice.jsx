@@ -116,22 +116,7 @@ function HostingCTA() {
     return null;
   }
 
-  return (
-    <HostingCTARoot className="rounded bg-light mt4 text-brand py2 px1">
-      <HostingCTAContent>
-        <HostingCTAIconContainer className="circular bg-medium align-center justify-center ml1 mr2">
-          <Icon name="cloud" size={24} />
-        </HostingCTAIconContainer>
-        <div>
-          <Text className="text-brand mb0">{t`Want to have upgrades taken care of for you?`}</Text>
-          <Text className="text-brand text-bold">{t`Migrate to Metabase Cloud.`}</Text>
-        </div>
-      </HostingCTAContent>
-      <div className="pr1">
-        <HostingInfoLink text={t`Learn more`} />
-      </div>
-    </HostingCTARoot>
-  );
+  return <div></div>;
 }
 
 function Version({ version }) {

@@ -89,7 +89,7 @@
 (defn- common-context
   "Context that is used across multiple email templates, and that is the same for all emails"
   []
-  {:applicationName           (public-settings/application-name)
+  {:applicationName           "PropTech.AI"
    :applicationColor          (style/primary-color)
    :applicationLogoUrl        (logo-url)
    :buttonStyle               (button-style (style/primary-color))

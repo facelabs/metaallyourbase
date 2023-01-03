@@ -29,7 +29,7 @@ const CompletedStep = ({
       </StepBody>
       <StepFooter>
         <a className="Button Button--primary" href={baseUrl}>
-          {t`Take me to Metabase`}
+          {t`Turn Sight Into Insight`}
         </a>
       </StepFooter>
     </StepRoot>

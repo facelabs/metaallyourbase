@@ -53,7 +53,6 @@ const config = (module.exports = {
   entry: {
     "app-main": "./app-main.js",
     "app-public": "./app-public.js",
-    "app-embed": "./app-embed.js",
     styles: "./css/index.css",
   },
 

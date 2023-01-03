@@ -26,7 +26,7 @@ const HomeXraySection = ({
   database,
   candidates,
 }: HomeXraySectionProps): JSX.Element => {
-  const isSample = database.is_sample;
+  const isSample = false;
   const schemas = candidates.map(d => d.schema);
   const [schema, setSchema] = useState(schemas[0]);
   const candidate = candidates.find(d => d.schema === schema);
@@ -36,7 +36,7 @@ const HomeXraySection = ({
 
   return (
     <div>
-      {isSample ? (
+      {/* {isSample ? (
         <HomeCaption primary>
           {t`Try out these sample x-rays to see what Metabase can do.`}
         </HomeCaption>
@@ -67,7 +67,7 @@ const HomeXraySection = ({
           />
         ))}
         <HomeHelpCard />
-      </SectionBody>
+      </SectionBody> */}
     </div>
   );
 };

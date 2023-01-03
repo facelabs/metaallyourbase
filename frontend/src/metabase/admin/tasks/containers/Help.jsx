@@ -105,26 +105,6 @@ export default class Help extends Component {
     );
     return (
       <HelpRoot>
-        <AdminHeader title={t`Help`} className="mb2" />
-        <HelpLinks>
-          <ol>
-            <HelpLink
-              title={t`Get Help`}
-              description={t`Resources and support`}
-              link={
-                MetabaseSettings.isPaidPlan()
-                  ? `https://www.metabase.com/help-premium?utm_source=in-product&utm_medium=troubleshooting&utm_campaign=help&instance_version=${tag}&diag=${compactDetailStringForUrl}`
-                  : `https://www.metabase.com/help?utm_source=in-product&utm_medium=troubleshooting&utm_campaign=help&instance_version=${tag}`
-              }
-            />
-            <HelpLink
-              title={t`File a bug report`}
-              description={t`Create a GitHub issue (includes the diagnostic info below)`}
-              link={githubIssueLink(detailString)}
-            />
-          </ol>
-        </HelpLinks>
-
         <HelpBody>
           <AdminHeader title={t`Diagnostic Info`} className="mb2" />
           <p>{t`Please include these details in support requests. Thank you!`}</p>

@@ -25,7 +25,7 @@
 (defsetting check-for-updates
   (deferred-tru "Identify when new versions of Metabase are available.")
   :type    :boolean
-  :default true)
+  :default false)
 
 (defsetting version-info
   (deferred-tru "Information about available versions of Metabase.")
@@ -49,7 +49,7 @@
 
 (defsetting site-name
   (deferred-tru "The name used for this instance of Metabase.")
-  :default    "Metabase"
+  :default    "Analytics"
   :visibility :settings-manager)
 
 ;; `::uuid-nonce` is a Setting that sets a site-wide random UUID value the first time it is fetched.
@@ -150,12 +150,12 @@
 (defsetting anon-tracking-enabled
   (deferred-tru "Enable the collection of anonymous usage data in order to help Metabase improve.")
   :type       :boolean
-  :default    true
+  :default    false
   :visibility :public)
 
 (defsetting ga-code
   (deferred-tru "Google Analytics tracking code.")
-  :default    "UA-60817802-1"
+  :default    ""
   :visibility :public
   :doc        false)
 
@@ -279,8 +279,7 @@
   (deferred-tru "This will replace the word \"Metabase\" wherever it appears.")
   :visibility :public
   :type       :string
-  :enabled?   premium-features/enable-whitelabeling?
-  :default    "Metabase")
+  :default    "PropTech.AI")
 
 (defsetting loading-message
   (deferred-tru "Message to show while a query is running.")
@@ -302,7 +301,7 @@
   (deferred-tru "This will replace “Lato” as the font family.")
   :visibility :public
   :type       :string
-  :default    "Lato"
+  :default    "Roboto"
   :enabled?   premium-features/enable-whitelabeling?
   :setter (fn [new-value]
               (when new-value
@@ -345,14 +344,14 @@
   :visibility :public
   :type       :boolean
   :enabled?   premium-features/enable-whitelabeling?
-  :default    true)
+  :default    false)
 
 (defsetting show-lighthouse-illustration
   (deferred-tru "Display the lighthouse illustration on the home and login pages.")
   :visibility :public
   :type       :boolean
   :enabled?   premium-features/enable-whitelabeling?
-  :default    true)
+  :default    false)
 
 (defsetting enable-password-login
   (deferred-tru "Allow logging in by email and password.")
@@ -391,7 +390,7 @@
 (defsetting enable-xrays
   (deferred-tru "Allow users to explore data using X-rays")
   :type       :boolean
-  :default    true
+  :default    false
   :visibility :authenticated)
 
 (defsetting show-homepage-data
@@ -399,7 +398,7 @@
    (str "Whether or not to display data on the homepage. "
         "Admins might turn this off in order to direct users to better content than raw data"))
   :type       :boolean
-  :default    true
+  :default    false
   :visibility :authenticated)
 
 (defsetting show-homepage-xrays
@@ -407,7 +406,7 @@
     (str "Whether or not to display x-ray suggestions on the homepage. They will also be hidden if any dashboards are "
          "pinned. Admins might hide this to direct users to better content than raw data"))
   :type       :boolean
-  :default    true
+  :default    false
   :visibility :authenticated)
 
 (defsetting show-homepage-pin-message
@@ -415,7 +414,7 @@
    (str "Whether or not to display a message about pinning dashboards. It will also be hidden if any dashboards are "
         "pinned. Admins might hide this to direct users to better content than raw data"))
   :type       :boolean
-  :default    true
+  :default    false
   :visibility :authenticated
   :doc        false)
 

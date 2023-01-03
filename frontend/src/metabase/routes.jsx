@@ -146,7 +146,7 @@ const CanAccessSettings = MetabaseIsSetup(
 );
 
 export const getRoutes = store => (
-  <Route title={t`Metabase`} component={App}>
+  <Route title={t`Analytics`} component={App}>
     {/* SETUP */}
     <Route
       path="/setup"

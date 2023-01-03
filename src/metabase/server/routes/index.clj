@@ -84,7 +84,7 @@
       :siteLocalizationJSON (escape-script (load-localization (public-settings/site-locale)))
       :language             (hiccup.util/escape-html (public-settings/site-locale))
       :favicon              (hiccup.util/escape-html (public-settings/application-favicon-url))
-      :applicationName      (hiccup.util/escape-html (public-settings/application-name))
+      :applicationName      (hiccup.util/escape-html "PropTech.AI")
       :uri                  (hiccup.util/escape-html uri)
       :baseHref             (hiccup.util/escape-html (base-href))
       :embedCode            (when embeddable? (embed/head uri))

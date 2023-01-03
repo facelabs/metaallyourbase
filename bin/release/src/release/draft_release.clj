@@ -33,7 +33,7 @@
 
 (defn- release-title []
   (case (c/edition)
-    :oss (format "Metabase v%s" (c/version))
+    :oss (format "PropTech.AI Analytics v%s" (c/version))
     ))
 
 (defn- upload-draft-changelog! [changelog]

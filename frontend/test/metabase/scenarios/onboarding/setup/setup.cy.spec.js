@@ -154,7 +154,7 @@ describe("scenarios > setup", () => {
       cy.findByText(
         "Get infrequent emails about new releases and feature updates.",
       );
-      cy.findByText("Take me to Metabase").click();
+      cy.findByText("Turn Sight Into Insight").click();
       cy.location("pathname").should("eq", "/");
     });
   });
@@ -207,7 +207,7 @@ describe("scenarios > setup", () => {
 
     // Finish & Subscribe
 
-    cy.findByText("Take me to Metabase").click();
+    cy.findByText("Turn Sight Into Insight").click();
     cy.location("pathname").should("eq", "/");
   });
 

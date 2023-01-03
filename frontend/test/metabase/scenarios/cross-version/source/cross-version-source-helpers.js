@@ -38,7 +38,7 @@ export function setupInstance(version) {
   ).click();
   cy.findByText("All collection is completely anonymous.").should("not.exist");
   cy.findByText(finalSetupButton).click();
-  cy.findByText("Take me to Metabase").click();
+  cy.findByText("Turn Sight Into Insight").click();
 
   cy.location("pathname").should("eq", "/");
   cy.contains("Reviews");

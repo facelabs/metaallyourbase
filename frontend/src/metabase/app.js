@@ -19,10 +19,6 @@ import "metabase/lib/colors";
 // NOTE: this loads all builtin plugins
 import "metabase/plugins/builtin";
 
-// This is conditionally aliased in the webpack config.
-// If EE isn't enabled, it loads an empty file.
-import "ee-plugins"; // eslint-disable-line import/no-unresolved
-
 import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";

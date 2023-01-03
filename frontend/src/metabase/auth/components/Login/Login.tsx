@@ -24,7 +24,7 @@ const Login = ({
 
   return (
     <AuthLayout>
-      <LoginTitle>{t`Sign in to Metabase`}</LoginTitle>
+      <LoginTitle>{t`Sign in to PropTech.AI Analytics`}</LoginTitle>
       {selection && selection.Panel && (
         <LoginPanel>
           <selection.Panel redirectUrl={redirectUrl} />

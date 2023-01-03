@@ -23,8 +23,7 @@ describe("CompletedStep", () => {
 
     render(<CompletedStep {...props} />);
 
-    expect(screen.getByText("Metabase Newsletter"));
-    expect(screen.getByText("Take me to Metabase"));
+    expect(screen.getByText("Turn Sight Into Insight"));
   });
 });
 
