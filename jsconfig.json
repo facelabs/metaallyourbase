@@ -1,0 +1,17 @@
+{
+  "include": [
+    "frontend/src/**/*",
+    "frontend/test/**/*",
+  ],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "*": [
+        "./frontend/src/*",
+        "./frontend/test/*"
+      ]
+    },
+    "experimentalDecorators": true,
+    "strictBindCallApply": true
+  }
+}
