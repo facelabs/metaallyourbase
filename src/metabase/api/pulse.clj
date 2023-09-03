@@ -155,7 +155,7 @@
                        (assoc-in [:slack :configured] (slack/slack-configured?))
                        (assoc-in [:email :configured] (email/email-configured?)))]
     {:channels (cond
-                 (dissoc chan-types :slack)
+                 true (dissoc chan-types :slack)
 
                  ;; no Slack integration, so we are g2g
                  (not (get-in chan-types [:slack :configured]))
