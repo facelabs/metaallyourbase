@@ -154,26 +154,7 @@
   (let [chan-types (-> channel-types
                        (assoc-in [:slack :configured] (slack/slack-configured?))
                        (assoc-in [:email :configured] (email/email-configured?)))]
-    {:channels (cond
-                 (when-let [segmented-user? (resolve false)]
-                   (segmented-user?))
-                 (dissoc chan-types :slack)
-
-                 ;; no Slack integration, so we are g2g
-                 (not (get-in chan-types [:slack :configured]))
-                 chan-types
-
-                 ;; if we have Slack enabled return cached channels and users
-                 :else
-                 (try
-                   (future (slack/refresh-channels-and-usernames-when-needed!))
-                   (assoc-in chan-types
-                             [:slack :fields 0 :options]
-                             (->> (slack/slack-cached-channels-and-usernames)
-                                  :channels
-                                  (map :display-name)))
-                   (catch Throwable e
-                     (assoc-in chan-types [:slack :error] (.getMessage e)))))}))
+    {:channels }))
 
 (defn- pulse-card-query-results
   {:arglists '([card])}
